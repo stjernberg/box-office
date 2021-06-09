@@ -1,13 +1,16 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
+import Navs from "./components/Navs";
 const App = () => {
   return (
-    <Switch>
-      <Route path="/" exact>
-        This is the home page
-      </Route>
-    </Switch>
+    <>
+      <Navs />
+      <Switch>
+        <Route path="/" exact></Route>
+        <Route path="/starred">This is starred</Route>
+      </Switch>
+    </>
   );
 };
 
