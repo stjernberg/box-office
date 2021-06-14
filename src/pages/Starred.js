@@ -1,10 +1,10 @@
 import React from "react";
-import Navs from "../components/Navs";
+// import Navs from "../components/Navs";
 
 const Starred = () => {
   return (
     <>
-      <Navs />
+      {/* <Navs /> */}
       <div>This is Starred</div>
     </>
   );
