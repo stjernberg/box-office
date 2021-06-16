@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import IMAGE_NOT_FOUND from "../../images/not-found.png";
+import { StyledShowCard } from "./ShowCard.styled";
 
 const ShowCard = ({ id, image, name, summary }) => {
   const summaryAsText = summary
@@ -9,7 +10,7 @@ const ShowCard = ({ id, image, name, summary }) => {
     : "No description";
 
   return (
-    <div>
+    <StyledShowCard>
       <div className="img-wrapper">
         <img src={image ? image.medium : IMAGE_NOT_FOUND} alt={name} />
       </div>
@@ -22,7 +23,7 @@ const ShowCard = ({ id, image, name, summary }) => {
         <Link to={`/show/${id}`}>Read more</Link>
         <button type="button">Star me</button>
       </div>
-    </div>
+    </StyledShowCard>
   );
 };
 
