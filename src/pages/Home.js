@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Navs from "../components/Navs";
 import ShowGrid from "../components/show/ShowGrid";
@@ -11,6 +11,14 @@ const Home = () => {
   const BASE_URL = `https://api.tvmaze.com/search/${searchOption}?q=${input}`;
 
   const isShowsSearch = searchOption === "shows";
+
+  useEffect(() => {
+    console.log("use effect run");
+
+    return () => {
+      console.log("exit");
+    };
+  }, [searchOption]);
 
   const onSearch = () => {
     fetch(BASE_URL)
